@@ -1,0 +1,33 @@
+{
+  "name": "hospital-management-system",
+  "version": "1.0.0",
+  "description": "Hospital management system",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev:api-gateway\" \"npm run dev:appointment\" \"npm run dev:auth\" \"npm run dev:billing\" \"npm run dev:doctor\" \"npm run dev:notifications\" \"npm run dev:patient\" \"npm run dev:pharmacy\"",
+    "dev:api-gateway": "npm --prefix services/api-gateway run start",
+    "dev:appointment": "npm --prefix services/appointment-service run start",
+    "dev:auth": "npm --prefix services/auth-service run start",
+    "dev:billing": "npm --prefix services/billing-service run start",
+    "dev:doctor": "npm --prefix services/doctor-service run start",
+    "dev:notifications": "npm --prefix services/notification-service run start",
+    "dev:patient": "npm --prefix services/patient-service run start",
+    "dev:pharmacy": "npm --prefix services/pharmacy-service run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastianOnofrei/hospital-management-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebastianOnofrei/hospital-management-system/issues"
+  },
+  "homepage": "https://github.com/SebastianOnofrei/hospital-management-system#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
+}
