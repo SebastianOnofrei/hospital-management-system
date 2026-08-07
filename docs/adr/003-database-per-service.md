@@ -1,6 +1,6 @@
 ### ADR-003 Database per service versus Shared database
 
-##### Decision: I chose database per service since I try to apply microservices best practices.
+##### Decision: I chose database per service since I try to apply microservices best practices. I know that most of the times the Distributed Monolith approach is more common, with shared Databases.
 
 Pros:
 
