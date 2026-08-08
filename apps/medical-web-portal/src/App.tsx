@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <>Hello from Medical web portal</>;
+  return <p>Hello from Medical web portal</p>;
 }
 
 export default App;

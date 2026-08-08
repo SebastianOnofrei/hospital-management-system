@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <>Hello from the admin dashboard</>;
+  return <p>Hello from the admin dashboard</p>;
 }
 
 export default App;
