@@ -8,6 +8,34 @@ app.get("/", (req, res) => {
   res.send("Hellooooo from Doctor service");
 });
 
+app.get("/health/live", (req, res) => {
+  res.json({
+    status: "healthy ✅",
+    message: "Doctor Service is up and running ",
+    service: "Doctor Service",
+  });
+});
+
+// ready means ready to accept traffic - all dependencies for receiving requests are up and running
+app.get("/health/ready", (req, res) => {
+  try {
+    // DB check and other dependencies in future development
+  } catch (error) {
+    // error message must be checked and seen where the problem happend.
+    res.json({
+      status: "unhealthy ❌",
+      service: "Doctor Service",
+      dependencies: ["Database ❌"],
+    });
+  }
+
+  res.json({
+    status: "healthy ✅",
+    service: "Doctor Service",
+    dependencies: ["Database ✅"],
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Doctor service started on localhost port ${PORT}`);
 });
