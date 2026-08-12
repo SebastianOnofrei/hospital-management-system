@@ -1,6 +1,12 @@
 const express = require("express");
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
+
+app.disable("x-powered-by");
+app.use(helmet());
+app.use(express.json({ limit: "1mb" }));
 
 const PORT = process.env.PORT || 3001;
 
