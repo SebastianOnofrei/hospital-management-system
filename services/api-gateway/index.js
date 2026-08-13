@@ -33,6 +33,9 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
+const abc = "test";
+console.log(abc);
+
 app.use(
   "/api/appointment",
   createProxyMiddleware({
