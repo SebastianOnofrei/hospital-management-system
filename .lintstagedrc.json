@@ -1,0 +1,13 @@
+{
+  "apps/medical-web-portal/**/*.{js,jsx}": "npm --prefix apps/medical-web-portal exec eslint --",
+  "apps/admin-dashboard/**/*.{js,jsx}": "npm --prefix apps/admin-dashboard exec eslint --",
+
+  "services/api-gateway/**/*.js": "npm --prefix services/api-gateway exec eslint --",
+  "services/appointment-service/**/*.js": "npm --prefix services/appointment-service exec eslint --",
+  "services/auth-service/**/*.js": "npm --prefix services/auth-service exec eslint --",
+  "services/billing-service/**/*.js": "npm --prefix services/billing-service exec eslint --",
+  "services/doctor-service/**/*.js": "npm --prefix services/doctor-service exec eslint --",
+  "services/notification-service/**/*.js": "npm --prefix services/notification-service exec eslint --",
+  "services/patient-service/**/*.js": "npm --prefix services/patient-service exec eslint --",
+  "services/pharmacy-service/**/*.js": "npm --prefix services/pharmacy-service exec eslint --"
+}

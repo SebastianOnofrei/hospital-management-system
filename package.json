@@ -15,7 +15,8 @@
     "dev:doctor": "npm --prefix services/doctor-service run start",
     "dev:notifications": "npm --prefix services/notification-service run start",
     "dev:patient": "npm --prefix services/patient-service run start",
-    "dev:pharmacy": "npm --prefix services/pharmacy-service run start"
+    "dev:pharmacy": "npm --prefix services/pharmacy-service run start",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
   },
   "homepage": "https://github.com/SebastianOnofrei/hospital-management-system#readme",
   "devDependencies": {
-    "concurrently": "^10.0.4"
+    "concurrently": "^10.0.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0"
   }
 }
