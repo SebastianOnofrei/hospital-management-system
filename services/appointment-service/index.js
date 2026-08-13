@@ -8,6 +8,13 @@ app.disable("x-powered-by");
 app.use(helmet());
 app.use(express.json({ limit: "1mb" }));
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 100,
+});
+
+app.use(limiter);
+
 const PORT = process.env.PORT || 3001;
 
 app.get("/", (req, res) => {
@@ -30,6 +37,7 @@ app.get("/health/ready", (req, res) => {
     // error message must be checked and seen where the problem happend.
     res.json({
       status: "unhealthy ❌",
+      message: error,
       service: "Appointment Service",
       dependencies: ["Database ❌"],
     });

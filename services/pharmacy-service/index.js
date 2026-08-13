@@ -10,6 +10,13 @@ app.use(express.json({ limit: "1mb" }));
 
 const PORT = process.env.PORT || 3007;
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 100,
+});
+
+app.use(limiter);
+
 app.get("/", (req, res) => {
   res.send("Hellooooo from Pharmacy service");
 });
@@ -31,6 +38,7 @@ app.get("/health/ready", (req, res) => {
     // error message must be checked and seen where the problem happend.
     res.json({
       status: "unhealthy ❌",
+      error,
       service: "Pharmacy Service",
       dependencies: ["Database ❌"],
     });

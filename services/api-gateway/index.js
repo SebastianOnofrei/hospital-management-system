@@ -110,6 +110,7 @@ app.get("/health/ready", (req, res) => {
     // error message must be checked and seen where the problem happend.
     res.json({
       status: "unhealthy ❌",
+      message: error,
       service: "API Gateway Service",
       dependencies: [],
     });
