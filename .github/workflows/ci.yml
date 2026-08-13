@@ -8,7 +8,7 @@ on:
       - develop
 
 jobs:
-  ci:
+  medical-web-portal:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,42 +20,190 @@ jobs:
         with:
           node-version: 24
 
-      - name: Install medical-web-portal dependencies
+      - name: Install dependencies
         working-directory: apps/medical-web-portal
         run: npm ci
 
-      - name: Install admin-dashboard dependencies
+      - name: Lint
+        working-directory: apps/medical-web-portal
+        run: npm run lint
+
+  admin-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: apps/admin-dashboard
         run: npm ci
 
-      - name: Install API Gateway dependencies
+      - name: Lint
+        working-directory: apps/admin-dashboard
+        run: npm run lint
+
+  api-gateway:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/api-gateway
         run: npm ci
 
-      - name: Install appointment-service dependencies
+      - name: Lint
+        working-directory: services/api-gateway
+        run: npm run lint
+
+  appointment-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/appointment-service
         run: npm ci
 
-      - name: Install auth-service dependencies
+      - name: Lint
+        working-directory: services/appointment-service
+        run: npm run lint
+
+  auth-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/auth-service
         run: npm ci
 
-      - name: Install billing-service dependencies
+      - name: Lint
+        working-directory: services/auth-service
+        run: npm run lint
+
+  billing-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/billing-service
         run: npm ci
 
-      - name: Install doctor-service dependencies
+      - name: Lint
+        working-directory: services/billing-service
+        run: npm run lint
+
+  doctor-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/doctor-service
         run: npm ci
 
-      - name: Install notification-service dependencies
+      - name: Lint
+        working-directory: services/doctor-service
+        run: npm run lint
+
+  notification-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/notification-service
         run: npm ci
 
-      - name: Install patient-service dependencies
+      - name: Lint
+        working-directory: services/notification-service
+        run: npm run lint
+
+  patient-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/patient-service
         run: npm ci
 
-      - name: Install pharmacy-service dependencies
+      - name: Lint
+        working-directory: services/patient-service
+        run: npm run lint
+
+  pharmacy-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
         working-directory: services/pharmacy-service
         run: npm ci
+
+      - name: Lint
+        working-directory: services/pharmacy-service
+        run: npm run lint
