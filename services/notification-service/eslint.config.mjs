@@ -1,4 +1,5 @@
-import { defineConfig } from "eslint";
+import { defineConfig } from "eslint/config";
+import globals from "globals";
 
 export default defineConfig([
   {
@@ -6,6 +7,9 @@ export default defineConfig([
     rules: {
       "no-unused-vars": "error",
       "no-undef": "error",
+    },
+    languageOptions: {
+      globals: globals.node,
     },
   },
 ]);
