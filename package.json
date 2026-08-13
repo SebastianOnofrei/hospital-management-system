@@ -16,7 +16,8 @@
     "dev:notifications": "npm --prefix services/notification-service run start",
     "dev:patient": "npm --prefix services/patient-service run start",
     "dev:pharmacy": "npm --prefix services/pharmacy-service run start",
-    "prepare": "husky"
+    "prepare": "husky",
+    "install:all": "node scripts/install-all.js"
   },
   "repository": {
     "type": "git",
