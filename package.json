@@ -17,7 +17,8 @@
     "dev:patient": "npm --prefix services/patient-service run start",
     "dev:pharmacy": "npm --prefix services/pharmacy-service run start",
     "prepare": "husky",
-    "install:all": "node scripts/install-all.js"
+    "install:all": "node scripts/install-all.js",
+    "db:setup": "node scripts/setup-databases.js"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,9 @@
     "concurrently": "^10.0.4",
     "husky": "^9.1.7",
     "lint-staged": "^17.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "pg": "^8.23.0"
   }
 }
