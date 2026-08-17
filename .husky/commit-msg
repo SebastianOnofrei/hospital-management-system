@@ -1,7 +1,6 @@
 commit_msg=$(cat "$1")
 
-if ! echo "$commit_msg" | grep -Eq '^(feature|bugfix|refactor|chore|docs|test)/HMS-[0-9]+-[a-z0-9-]+ .+'; then
-  echo "❌ Invalid commit message."
+if ! echo "$commit_msg" | grep -Eq '^(feature|bugfix|refactor|chore|docs|test)/HMS-([0-9]+|NO-TICKET)-[a-z0-9-]+ .+'; then  echo "❌ Invalid commit message."
   echo ""
   echo "Expected format:"
   echo "  feature/HMS-010-add-jest add Jest configuration"
