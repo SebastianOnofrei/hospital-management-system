@@ -1,12 +1,13 @@
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import "./App.css";
+import Home from "./components/pages/Home";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
   return (
     <>
-      <p>Hello from Medical web portal</p>
+      {/* <p>Hello from Medical web portal</p>
       <h1>{t("welcome")}</h1>
       <button
         style={{ border: "1px solid black" }}
@@ -19,7 +20,8 @@ function App() {
         }}
       >
         Change language
-      </button>
+      </button> */}
+      <Home/>
     </>
   );
 }
