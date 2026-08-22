@@ -1,10 +1,12 @@
-import app from "../app";
+import { Router } from "express";
 
-app.get("/", (req, res) => {
+const router = Router();
+
+router.get("/", (req, res) => {
   res.send("Hellooooo from Appointment service");
 });
 
-app.get("/health/live", (req, res) => {
+router.get("/health/live", (req, res) => {
   res.json({
     status: "healthy ✅",
     message: "Appointment Service is up and running ",
@@ -13,7 +15,7 @@ app.get("/health/live", (req, res) => {
 });
 
 // ready means ready to accept traffic - all dependencies for receiving requests are up and running
-app.get("/health/ready", (req, res) => {
+router.get("/health/ready", (req, res) => {
   try {
     // DB check and other dependencies in future development
   } catch (error) {
@@ -32,3 +34,5 @@ app.get("/health/ready", (req, res) => {
     dependencies: ["Database ✅"],
   });
 });
+
+export default router;
