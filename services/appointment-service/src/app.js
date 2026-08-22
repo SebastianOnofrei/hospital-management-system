@@ -5,10 +5,10 @@ const rateLimit = require("express-rate-limit");
 import {
   appointmentLogger,
   createHttpLogger,
+  createErrorHandler,
 } from "../../../packages/logger/src/index";
 
 import apppointmentRoutes from "./routes/appointment-routes";
-import errorHandler from "./middleware/error-handler";
 
 const app = express();
 
@@ -38,6 +38,6 @@ app.use(limiter);
 app.use("/appointment", apppointmentRoutes);
 
 // ERROR Handling - always last middleware to be used.
-app.use(errorHandler);
+app.use(createErrorHandler());
 
 export default app;

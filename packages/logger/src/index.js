@@ -9,3 +9,5 @@ export { default as gatewayLogger } from "./gateway-logger";
 export { default as notificationLogger } from "./notification-logger";
 export { default as patientLogger } from "./patient-logger";
 export { default as pharmacyLogger } from "./pharmacy-logger";
+
+export { createErrorHandler } from "./error-handler";
