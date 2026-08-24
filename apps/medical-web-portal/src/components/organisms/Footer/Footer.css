@@ -1,7 +1,6 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   gap: 20px;
   background-color: #23408e;
   color: #ffffff;
@@ -10,38 +9,8 @@
 }
 
 .footer-column {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   min-width: 2rem;
-  border-right: 1px solid #cccccc2c;
-}
-
-.footer-column h4 {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-column a {
-  color: #cccccc;
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-.footer-column a:hover {
-  color: #ffffff;
-}
-
-.footer-column p {
-  margin: 0 0 8px;
-  color: #cccccc;
-  font-size: 0.8rem;
 }
