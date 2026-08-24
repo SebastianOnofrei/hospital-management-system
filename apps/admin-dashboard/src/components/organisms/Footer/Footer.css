@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  background-color: #456bd3;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-column h4 {
+  display: flex;
+  gap: 0.5rem;
+}
+
