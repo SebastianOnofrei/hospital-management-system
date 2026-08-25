@@ -1,0 +1,51 @@
+/* Base Button Atom Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 1rem;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Default variant */
+.btn {
+  color: #0B7C8E;
+  border-color: #0B7C8E;
+  background-color: #f0f0f0;
+}
+
+.btn:hover {
+  background-color: #F4F8F9;
+}
+
+/* Primary Variant */
+.btn-primary {
+  background-color: #10B981;
+  color: #ffffff;
+  border-color: #10B981;
+}
+
+.btn-primary:hover {
+  background-color: #0D9668;
+}
+
+/* Danger Variant */
+.btn-danger {
+  background-color: #EF4444;
+  color: #ffffff;
+  border-color: #EF4444;
+}
+
+.btn-danger:hover {
+  background-color: #DC2626;
+}
+
+/* Disabled State */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

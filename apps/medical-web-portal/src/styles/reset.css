@@ -50,13 +50,16 @@ ul {
   padding: 0;
 }
 
+/* Charcoal Navy - #1A2B3C - High-contrast body text, primary titles*/
 a {
-  color: #cccccc;
+  color: #2da380;
   text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #93eecb;
 }
 
 p {
