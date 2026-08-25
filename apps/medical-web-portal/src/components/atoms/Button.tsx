@@ -1,3 +1,4 @@
+import './Button.css';
 // Defining prop types for the Button component
 interface ButtonProps {
   text: string;
