@@ -2,8 +2,13 @@ const { execSync } = require("node:child_process");
 
 const projects = [
   ".",
+
+  "packages/logger",
+  "packages/kafka",
+
   "apps/medical-web-portal",
   "apps/admin-dashboard",
+
   "services/api-gateway",
   "services/appointment-service",
   "services/auth-service",
