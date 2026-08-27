@@ -1,14 +1,14 @@
 import express from "express";
-const helmet = require("helmet");
-const rateLimit = require("express-rate-limit");
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
 
 import {
   notificationLogger,
   createHttpLogger,
   createErrorHandler,
-} from "../../../packages/logger/src/index";
+} from "../../../packages/logger/src/index.js";
 
-import notificationRoutes from "./routes/notification-routes";
+import notificationRoutes from "./routes/notification-routes.js";
 
 const app = express();
 
