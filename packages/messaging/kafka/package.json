@@ -1,16 +1,15 @@
 {
-  "name": "hms-logger",
+  "name": "hms-kafka",
   "version": "1.0.0",
-  "description": "",
+  "description": "Shared Kafka infrastructure for HMS microservices",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
-  "author": "",
+  "author": "Onofrei Sebastian",
   "license": "ISC",
   "dependencies": {
-    "pino": "^10.3.1",
-    "pino-http": "^11.0.0"
+    "kafkajs": "^2.2.4"
   }
 }
