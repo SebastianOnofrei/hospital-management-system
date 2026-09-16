@@ -1,9 +1,6 @@
-import '@testing-library/jest-dom/vitest';
-import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Button } from './Button';
-
 
 describe('Button Component', () => {
   it('renders the button text correctly', () => {
@@ -22,7 +19,7 @@ describe('Button Component', () => {
 
   it('calls onclick handler when clicked', async () => {
     const user = userEvent.setup();
-    const handleClick = vi.fn();
+    const handleClick = jest.fn();
 
     render(<Button text="Click Me" onclick={handleClick} />);
 
@@ -34,7 +31,7 @@ describe('Button Component', () => {
 
   it('is disabled and prevents clicks when disabled prop is true', async () => {
     const user = userEvent.setup();
-    const handleClick = vi.fn();
+    const handleClick = jest.fn();
 
     render(<Button text="Disabled" disabled={true} onclick={handleClick} />);
 
