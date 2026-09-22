@@ -4,6 +4,7 @@ import './Home.css';
 import logo from '../../assets/pictures/gg-logo.jpg';
 import { Button } from "../atoms/Button.tsx";
 import { Hero } from "../organisms/Hero/Hero.tsx";
+import AboutUs from "./AboutUs/AboutUs.tsx";
 
 const headerLinks = [
   { label: 'About', href: '/about' },
@@ -50,6 +51,7 @@ const Home = () => {
       <main className="main-content">
         {/* Page content goes here */}
       </main>
+      <AboutUs />
       <Footer />
     </div>
   );
