@@ -11,11 +11,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
     "classnames": "^2.5.1",
     "i18next": "^26.3.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-i18next": "^17.0.11",
+    "react-redux": "^9.3.0",
     "react-router": "^8.3.0"
   },
   "devDependencies": {
